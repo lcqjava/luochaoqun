@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.luochaoqun</groupId>
 		<artifactId>luochaoqun-springcloud</artifactId>
-		<version>1.0.0</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>luochaoqun-springcloud-eureka</artifactId>
 	<description>springcloud 注册中心</description>
