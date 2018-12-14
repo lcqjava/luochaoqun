@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+eureka:
+  server:
+    #自我保护模式关闭，默认开启
+    enableSelfPreservation: false
+  instance:
+    hostname: localhost
+  client:
+    healcheck:
+      enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${spring.cloud.client.ip-address}:${server.port}/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: pro
+    
+spring:
+  application:
+    name: eurka-server
