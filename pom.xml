@@ -8,6 +8,7 @@
 	<modules>
 		<module>luochaoqun-javacore</module>
 		<module>luochaoqun-example</module>
+		<module>luochaoqun-hole</module>
 	</modules>
 
 	<properties>

@@ -46,5 +46,6 @@
 
 	<modules>
 		<module>luochaoqun-springcloud-eureka</module>
+		<module>luochaoqun-springcloud-provider</module>
 	</modules>
 </project>
