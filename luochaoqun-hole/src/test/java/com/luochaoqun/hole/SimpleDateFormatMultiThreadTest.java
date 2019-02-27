@@ -6,6 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
 
+
 /**
  * All rights Reserved, Designed By www.xiaoaiqinqin.com
  * 
@@ -67,5 +68,12 @@ public class SimpleDateFormatMultiThreadTest {
 		}
 		
 	}
+	
+	@Test
+	public void test(){
+		String str = "27d0519f06ab4381a7cd67f620cc0362";
+		System.out.println(str.hashCode());
+	}
+	
 
 }

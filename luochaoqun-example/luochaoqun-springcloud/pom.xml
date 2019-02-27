@@ -12,7 +12,7 @@
 	<description>springcloud</description>
 
 	<properties>
-		<spring.boot.version>2.0.1.RELEASE</spring.boot.version>
+		<spring.boot.version>2.0.5.RELEASE</spring.boot.version>
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 	</properties>
 
@@ -47,5 +47,7 @@
 	<modules>
 		<module>luochaoqun-springcloud-eureka</module>
 		<module>luochaoqun-springcloud-provider</module>
+		<module>luochaoqun-springcloud-tx-order</module>
+		<module>luochaoqun-springcloud-tx-finance</module>
 	</modules>
 </project>

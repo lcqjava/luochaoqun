@@ -20,7 +20,6 @@
 说明：打印日志会有显示nginx监听的端口
 
 
-
 5.proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
 
 说明：如果是一台nginx效果一样，如果有多台nginx，$remote_addr是上一台nginx的ip

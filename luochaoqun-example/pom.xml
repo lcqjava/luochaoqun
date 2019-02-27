@@ -12,5 +12,6 @@
 
 	<modules>
 		<module>luochaoqun-springcloud</module>
+		<module>luochaoqun-netty</module>
 	</modules>
 </project>
