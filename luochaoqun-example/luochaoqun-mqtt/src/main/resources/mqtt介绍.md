@@ -1,0 +1,2 @@
+## mqtt介绍:IBM推出的，适用于网络不稳定情况下的消息推送，其消耗低、考虑客户端接收能力，在物联网行业广泛应用。实现mqtt协议的broker有mosmqtt/activemq/emq，其中mosmqtt和emq实现了mqtt所有功能，在性能方面emq官方提供的数据是1G双核设备支持6W设备连接（32G内存160万设备连接）
+
