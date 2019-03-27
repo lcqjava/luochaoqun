@@ -7,14 +7,25 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>luochaoqun-netty</artifactId>
-	<description>netty</description>
+	<packaging>pom</packaging>
+	<modules>
+		<module>luochaoqun-netty-instance-message</module>
+	</modules>
 
-	<dependencies>
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
-		</dependency>
+	<properties>
+		<spring.boot.version>2.0.5.RELEASE</spring.boot.version>
+	</properties>
 
-	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

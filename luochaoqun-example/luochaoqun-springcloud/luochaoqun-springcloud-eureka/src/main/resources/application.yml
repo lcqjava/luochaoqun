@@ -5,8 +5,6 @@ eureka:
   server:
     #自我保护模式关闭，默认开启
     enableSelfPreservation: false
-  instance:
-    hostname: localhost
   client:
     healcheck:
       enabled: true
@@ -18,7 +16,7 @@ eureka:
     prefer-ip-address: true
     metadata-map:
       zone: pro
-    
+    hostname: localhost
 spring:
   application:
     name: eurka-server

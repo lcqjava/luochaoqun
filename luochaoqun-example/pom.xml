@@ -14,5 +14,6 @@
 		<module>luochaoqun-springcloud</module>
 		<module>luochaoqun-netty</module>
 		<module>luochaoqun-mqtt</module>
+		<module>luochoqun-elasticsearch</module>
 	</modules>
 </project>

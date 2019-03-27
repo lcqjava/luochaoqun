@@ -5,6 +5,7 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.fusesource.mqtt.client.QoS;
 
 /**
  * All rights Reserved, Designed By www.xiaoaiqinqin.com
@@ -16,11 +17,11 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
  */
 public class MqttPublish {
 
-	static String broker = "tcp://127.0.0.1:1883";
+	static String broker = "tcp://47.94.170.165:1883";
 
 	public static void main(String[] args) throws MqttException, InterruptedException {
-		String clientId = "mqtt-client-id-1";
-		String content = "zhongqiyuan";
+		String clientId = "mqtt-publish-id-1";
+		String content = "测试mqtt-";
 		for (int i = 0; i < 1; i++) {
 			Thread thread = new Thread(new CreateConnect(clientId+i,content+i));
 			thread.start();
@@ -31,7 +32,7 @@ public class MqttPublish {
 
 class CreateConnect implements Runnable {
 	
-	static String broker = "tcp://127.0.0.1:1883";
+	static String broker = "tcp://47.94.170.165:1883";
 	String topic = "mqttTest";
 	private String clientId;
 	private String content;
@@ -44,23 +45,28 @@ class CreateConnect implements Runnable {
 	private void createConnect()
 			throws InterruptedException, MqttException {
 		
-		int qos = 2;
+		int qos = QoS.AT_LEAST_ONCE.ordinal();
 		MemoryPersistence persistence = new MemoryPersistence();
 
 		MqttClient sampleClient = null;
 		try {
 			sampleClient = new MqttClient(broker, clientId, persistence);
 			MqttConnectOptions connOpts = new MqttConnectOptions();
+			//清空回话信息
 			connOpts.setCleanSession(true);
-			System.out.println("Connecting to broker: " + broker);
+			//连接超时时间，默认30秒
+			Integer connectionTimeout = 30;
+			connOpts.setConnectionTimeout(connectionTimeout);
 			sampleClient.connect(connOpts);
-			System.out.println("Connected");
-			System.out.println("Publishing message: " + content);
-			MqttMessage message = new MqttMessage(content.getBytes());
-			message.setQos(qos);
+			
+			int i = 0;
 			while(true){
+				String msg = content+i++;
+				MqttMessage message = new MqttMessage(msg.getBytes());
+				message.setQos(qos);
+				message.setRetained(true);
 				sampleClient.publish(topic, message);
-				System.out.println("Message published");
+				System.out.println(msg+" Message published");
 				Thread.sleep(1000);
 			}
 			// sampleClient.disconnect();

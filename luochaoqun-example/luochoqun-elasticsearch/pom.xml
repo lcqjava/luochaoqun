@@ -6,19 +6,21 @@
 		<artifactId>luochaoqun-example</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>luochaoqun-mqtt</artifactId>
+	<artifactId>luochoqun-elasticsearch</artifactId>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.eclipse.paho</groupId>
-			<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
-			<version>1.2.1</version>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>transport</artifactId>
+			<version>6.1.4</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.fusesource.mqtt-client</groupId>
-			<artifactId>mqtt-client</artifactId>
-			<version>1.12</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.8</version>
 		</dependency>
+
 
 	</dependencies>
 

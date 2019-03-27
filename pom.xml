@@ -12,6 +12,7 @@
 		<module>luochaoqun-util</module>
 		<module>luochaoqun-test</module>
 		<module>luochaoqun-knowledgescope</module>
+		<module>luochaoqun-self-frame</module>
 	</modules>
 
 	<properties>

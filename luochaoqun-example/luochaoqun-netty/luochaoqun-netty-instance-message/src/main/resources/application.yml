@@ -1,0 +1,22 @@
+server:
+  port: 12001
+  servlet.context-path: /xiaoai-chat
+
+spring:
+  application:
+    name: xiaoai-chat
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  banner:
+    charset: utf-8  
+  devtools:
+      restart:
+        #热部署生效
+        enabled: true
+        #设置重启的目录
+        additional-paths: src/main/java
+        #classpath目录下的WEB-INF文件夹内容修改不重启
+        exclude: WEB-INF/**
